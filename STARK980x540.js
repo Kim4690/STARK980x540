@@ -99,6 +99,6 @@ overlay.classList.remove("show");
 
 };
 
-document.currentScript.parentNode.insertBefore(banner, document.currentScript);
+document.body.appendChild(banner);
 
 })();
