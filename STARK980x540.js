@@ -20,7 +20,7 @@ banner.innerHTML = `
 position:absolute;
 width:110%;
 height:110%;
-background:url("Banner2.jpg") center/cover no-repeat;
+background:url("https://kim4690.github.io/STARK980x540/Banner2.jpg") center/cover no-repeat;
 animation:starkMove 50s ease-in-out infinite alternate;
 }
 
