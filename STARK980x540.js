@@ -86,11 +86,22 @@ Tak for at du klikkede på banneret
 banner.onclick = function(){
 
 var overlay = banner.querySelector(".stark-overlay");
+
 overlay.classList.add("show");
+
+/* åbner landingpage efter 1,8 sek */
 
 setTimeout(function(){
 window.open(landingpage,"_blank");
 },1800);
+
+/* skjuler boksen igen */
+
+setTimeout(function(){
+overlay.classList.remove("show");
+},2000);
+
+};
 
 };
 
