@@ -1,6 +1,6 @@
 (function(){
 
-var landingpage = "https://indsæt-landingpage-her.dk";
+var landingpage = "https://bygtek.dk";
 
 var banner = document.createElement("div");
 
