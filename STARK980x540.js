@@ -23,12 +23,12 @@ height:110%;
 top:-5%;
 left:-5%;
 object-fit:cover;
-animation:starkMove 60s ease-in-out infinite alternate;
+animation:starkMove 80s ease-in-out infinite alternate;
 }
 
 @keyframes starkMove{
 0%{transform:translate(0,0) scale(1);}
-100%{transform:translate(-3%, -2%) scale(1.05);}
+100%{transform:translate(-2%, -2%) scale(1.04);}
 }
 
 .stark-cta{
@@ -39,9 +39,10 @@ transform:translateX(-50%);
 background:#f58220;
 color:white;
 font-weight:bold;
-padding:14px 30px;
-font-size:clamp(14px,2vw,22px);
+padding:12px 26px;
+font-size:clamp(12px,2vw,22px);
 animation:starkBlink 3s infinite;
+border-radius:4px;
 }
 
 @keyframes starkBlink{
@@ -60,9 +61,9 @@ color:white;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:clamp(18px,3vw,30px);
+font-size:clamp(16px,3vw,30px);
 opacity:0;
-transition:0.4s;
+transition:opacity 0.4s;
 }
 
 .stark-overlay.show{
@@ -86,8 +87,13 @@ Tak for at du klikkede på banneret
 banner.onclick = function(){
 
 var overlay = banner.querySelector(".stark-overlay");
+var cta = banner.querySelector(".stark-cta");
 
 overlay.classList.add("show");
+
+/* stop blink når der klikkes */
+
+cta.style.animation = "none";
 
 setTimeout(function(){
 window.open(landingpage,"_blank");
@@ -95,7 +101,8 @@ window.open(landingpage,"_blank");
 
 setTimeout(function(){
 overlay.classList.remove("show");
-},2000);
+cta.style.animation = "starkBlink 3s infinite";
+},2200);
 
 };
 
