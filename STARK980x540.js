@@ -71,7 +71,7 @@ opacity:1;
 
 </style>
 
-<img class="stark-bg" src="https://kim4690.github.io/STARK980x540/Banner2.jpg">
+<img class="stark-bg" src="https://kim4690.github.io/STARK980x540/banner3.jpg">
 
 <div class="stark-cta">
 SE MERE
