@@ -20,7 +20,9 @@ banner.innerHTML = `
 position:absolute;
 width:110%;
 height:110%;
-background:url("https://kim4690.github.io/STARK980x540/Banner2.jpg") center/cover no-repeat;
+top:-5%;
+left:-5%;
+object-fit:cover;
 animation:starkMove 60s ease-in-out infinite alternate;
 }
 
@@ -69,7 +71,7 @@ opacity:1;
 
 </style>
 
-<div class="stark-bg"></div>
+<img class="stark-bg" src="https://kim4690.github.io/STARK980x540/Banner2.jpg">
 
 <div class="stark-cta">
 SE MERE
