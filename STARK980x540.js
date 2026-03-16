@@ -1,69 +1,53 @@
-<!DOCTYPE html>
-<html lang="da">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+(function(){
+
+var landingpage = "https://bygtek.dk.dk";
+
+var banner = document.createElement("div");
+
+banner.style.width = "100%";
+banner.style.maxWidth = "980px";
+banner.style.aspectRatio = "980/540";
+banner.style.position = "relative";
+banner.style.overflow = "hidden";
+banner.style.cursor = "pointer";
+banner.style.fontFamily = "Arial, sans-serif";
+
+banner.innerHTML = `
 
 <style>
 
-html,body{
-margin:0;
-padding:0;
-}
-
-#banner{
-position:relative;
-width:100%;
-height:100%;
-max-width:980px;
-max-height:540px;
-overflow:hidden;
-cursor:pointer;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-/* Baggrund */
-
-.bg{
+.stark-bg{
 position:absolute;
-top:0;
-left:0;
 width:110%;
 height:110%;
-background:url("Banner2.") center center / cover no-repeat;
-animation:slowMove 45s ease-in-out infinite alternate;
+background:url("Banner2.jpg") center/cover no-repeat;
+animation:starkMove 50s ease-in-out infinite alternate;
 }
 
-/* Meget langsom bevægelse */
-
-@keyframes slowMove{
+@keyframes starkMove{
 0%{transform:translate(0,0) scale(1);}
-100%{transform:translate(-2%, -2%) scale(1.05);}
+100%{transform:translate(-3%, -2%) scale(1.05);}
 }
 
-/* CTA */
-
-.cta{
+.stark-cta{
 position:absolute;
-bottom:10%;
+bottom:12%;
 left:50%;
 transform:translateX(-50%);
 background:#f58220;
 color:white;
 font-weight:bold;
-padding:12px 28px;
-font-size:20px;
-animation:blink 3s infinite;
+padding:14px 30px;
+font-size:clamp(14px,2vw,22px);
+animation:starkBlink 3s infinite;
 }
 
-@keyframes blink{
+@keyframes starkBlink{
 0%,100%{opacity:1;}
 50%{opacity:0.4;}
 }
 
-/* Klik besked */
-
-.overlay{
+.stark-overlay{
 position:absolute;
 top:0;
 left:0;
@@ -74,53 +58,40 @@ color:white;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
-font-size:28px;
+font-size:clamp(18px,3vw,30px);
 opacity:0;
-transition:0.3s;
+transition:0.4s;
 }
 
-.overlay.show{
+.stark-overlay.show{
 opacity:1;
 }
 
 </style>
-</head>
 
-<body>
+<div class="stark-bg"></div>
 
-<div id="banner">
-
-<div class="bg"></div>
-
-<div class="cta">
+<div class="stark-cta">
 SE MERE
 </div>
 
-<div class="overlay" id="overlay">
+<div class="stark-overlay">
 Tak for at du klikkede på banneret
 </div>
 
-</div>
-
-<script>
-
-var banner = document.getElementById("banner");
-var overlay = document.getElementById("overlay");
-
-var landingpage = "https://bygtek.dk";
+`;
 
 banner.onclick = function(){
 
+var overlay = banner.querySelector(".stark-overlay");
 overlay.classList.add("show");
 
 setTimeout(function(){
 window.open(landingpage,"_blank");
-},2000);
+},1800);
 
-}
+};
 
-</script>
+document.currentScript.parentNode.insertBefore(banner, document.currentScript);
 
-</body>
-</html>
+})();
