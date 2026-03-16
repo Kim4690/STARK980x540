@@ -33,7 +33,7 @@ animation:starkMove 60s ease-in-out infinite alternate;
 
 .stark-cta{
 position:absolute;
-bottom:12%;
+bottom:8%;
 left:50%;
 transform:translateX(-50%);
 background:#f58220;
