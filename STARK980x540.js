@@ -1,6 +1,6 @@
 (function(){
 
-var landingpage = "https://bygtek.dk";
+var landingpage = "https://indsæt-landingpage-her.dk";
 
 var banner = document.createElement("div");
 
@@ -21,7 +21,7 @@ position:absolute;
 width:110%;
 height:110%;
 background:url("https://kim4690.github.io/STARK980x540/Banner2.jpg") center/cover no-repeat;
-animation:starkMove 50s ease-in-out infinite alternate;
+animation:starkMove 60s ease-in-out infinite alternate;
 }
 
 @keyframes starkMove{
@@ -53,7 +53,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.85);
+background:#f58220;
 color:white;
 display:flex;
 align-items:center;
